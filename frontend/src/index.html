@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Каталог видеоигр</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="header"><h1>Каталог видеоигр<small>найдите игру, которая запустится на вашем компьютере</small></h1></div>
+
+  <section class="panel">
+    <h2>Поиск игр</h2>
+    <div class="filters">
+      <label>Жанр <select id="genre"><option value="">Любой</option></select></label>
+      <label>Название <input id="q" placeholder="часть названия"></label>
+      <label>Моя ОЗУ, ГБ <input id="ram" type="number" min="1" placeholder="16"></label>
+      <label>CPU, ГГц <input id="cpu" type="number" step="0.1" min="1" placeholder="3.5"></label>
+      <label>Диск, ГБ <input id="disk" type="number" min="1" placeholder="100"></label>
+      <label>Видеокарта
+        <select id="gpu">
+          <option value="">Любая</option>
+          <option value="1">1 — встроенная</option>
+          <option value="2">2 — GTX 650 / 750</option>
+          <option value="3">3 — GTX 960 / 1050</option>
+          <option value="4">4 — GTX 1060 / 1660</option>
+          <option value="5">5 — RTX 2060 / 3060</option>
+          <option value="6">6 — RTX 3080+</option>
+        </select>
+      </label>
+    </div>
+    <div class="buttons">
+      <button id="btn-catalog">Найти в каталоге (web-сервис)</button>
+      <button id="btn-library">Моя библиотека (БД)</button>
+    </div>
+  </section>
+
+  <p id="msg"></p>
+  <h2 id="title"></h2>
+  <div id="result" class="cards"></div>
+  <script src="app.js"></script>
+</body>
+</html>
